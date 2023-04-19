@@ -23,22 +23,16 @@ const drawLogo = (answers) => {
         }
 console.log(answers);
 console.log(shape);
-// check the shapeColour answer and set the colour of the shape object
-    shape.setcolour(answers.shapeColor);
-// check the logoText answer and set the text of the shape object
-    shape.settext(answers.logoText);
-// check the textColor answer and set the colour of the text
-    answers.color = answers.textColor;
 // create a template literal to format the SVG string
     const logoTemplate = `
     <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-    <rect width="100" height="100" fill="${answers.shapeColor}"/>
+    <${shape.render()} fill="${answers.shapeColor}"/>
     <text x="50" y="50" text-anchor="middle" fill="${answers.textColor}" font-size="30" font-family="Verdana">${answers.logoText}</text>
-    ${shape.render()}
+    
     </svg>
     `;
 // write the SVG string to a file called logo.svg
-const filePath = path.join(__dirname, "../logo.svg");
+const filePath = path.join(__dirname, "../examples/logo.svg");
 fs.writeFileSync(filePath, logoTemplate);
 };
 // export drawLogo function
