@@ -1,6 +1,6 @@
 // import all required packages, functions and objects
 const inquirer = require('inquirer');
-const { drawLogo } = require('./library/drawLogo.js');
+const drawLogo  = require('./library/drawLogo.js');
 
 // create questions for inquirer
 const logoQuestions = [
@@ -17,17 +17,24 @@ const logoQuestions = [
     },
     {
         type: 'list',
+        name: 'textColor',
+        message: 'Select a text color',
+        choices: ['red', 'green', 'blue', 'yellow', 'white', 'black']
+    },
+    {
+        type: 'list',
         name: 'shape',
         message: 'Select a shape',
         choices: ['square', 'triangle', 'circle']
     },
     {
         type: 'list',
-        name: 'color',
-        message: 'Select a color',
-        choices: ['red', 'green', 'blue']
+        name: 'shapeColor',
+        message: 'Select a shape color',
+        choices: ['red', 'green', 'blue', 'yellow', 'white', 'black']
     }
 ];
+
 // initiate function to prompt questions
 const init = async () => {
     // get answers from inquirer

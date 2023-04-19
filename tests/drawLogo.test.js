@@ -1,5 +1,5 @@
 // import drawlogo function to test
-const drawLogo = require("./drawLogo.js");
+const drawLogo = require("../library/drawLogo.js");
 
 // create test functionalities for drawLogo.js
 describe("drawLogo", () => {
