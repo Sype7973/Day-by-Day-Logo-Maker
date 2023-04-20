@@ -13,10 +13,13 @@ class Shape {
   class Circle extends Shape {
     constructor() {
       super();
+      this.cx = 300;
+      this.cy = 300;
+      this.r = 50;
     }
-    
+  
     render() {
-      return '';
+      return `circle cx="${this.cx}" cy="${this.cy}" r="${this.r}"`;
     }
   }
   
@@ -24,10 +27,12 @@ class Shape {
   class Square extends Shape {
     constructor() {
       super();
+      this.cx = 300;
+      this.cy - 300;
     }
     
     render() {
-      return '';
+      return `rect x="${this.cx}" y="${this.cy}"`
     }
   }
   
@@ -38,7 +43,7 @@ class Shape {
     }
     
     render() {
-      return '';
+      return 'polygon points="150, 18 244, 182 56, 182';
     }
   }
 
