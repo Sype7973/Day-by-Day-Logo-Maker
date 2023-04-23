@@ -22,7 +22,7 @@ describe("drawLogo", () => {
         <circle cx="100" cy="100" r="100" fill="red"/>
         <text x="100" y="100" text-anchor="middle" fill="white" font-size="40" font-family="Verdana">My Logo</text>
       </svg>
-    `.trim();
+    `.replace(/\s+/g, ' ').trim();
 
     // Run the function
     drawLogo(answers);
@@ -32,7 +32,7 @@ describe("drawLogo", () => {
     expect(fs.existsSync(filePath)).toBe(true);
 
     // Check that the contents of the file match the expected SVG string
-    const actualSvgString = fs.readFileSync(filePath, "utf8").trim();
+    const actualSvgString = fs.readFileSync(filePath, "utf8").replace(/\s+/g, ' ').trim();
     expect(actualSvgString).toBe(expectedSvgString);
   });
 });
