@@ -21,16 +21,31 @@ const drawLogo = (answers) => {
         logoShape = new Triangle();
         break;
         }
+        // create a variable to store the x and y coordinates of the shape to center text in the shape
+        let cx, cy;
+        if (logoShape instanceof Circle) {
+        cx = logoShape.cx;
+        cy = logoShape.cy;
+        } else if (logoShape instanceof Square) {
+        cx = logoShape.cx + logoShape.cw / 2;
+        cy = logoShape.cy + logoShape.ch / 2;
+        } else if (logoShape instanceof Triangle) {
+        cx = 100;
+        cy = 125;
+        }
 console.log(answers);
 console.log(logoShape);
 console.log(logoShape.render());
+
+
 // create a template literal to format the SVG string
-    const logoTemplate = `
-    <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-    <${logoShape.render()} fill="${answers.shapeColor}"/>
-    <text x="50" y="50" text-anchor="middle" fill="${answers.textColor}" font-size="30" font-family="Verdana">${answers.logoText}</text>
+  const logoTemplate = `
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <${logoShape.render()} fill="${answers.shapeColor}"/>
+      <text x="${cx}" y="${cy}" text-anchor="middle" fill="${answers.textColor}" font-size="40" font-family="Verdana">${answers.logoText}</text>
     </svg>
-    `;
+  `;
+    console.log(logoTemplate);
 // write the SVG string to a file called logo.svg
 const filePath = path.join(__dirname, "../examples/logo.svg");
 fs.writeFileSync(filePath, logoTemplate);
