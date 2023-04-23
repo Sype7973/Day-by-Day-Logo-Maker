@@ -33,9 +33,9 @@ const drawLogo = (answers) => {
         cx = 100;
         cy = 125;
         }
-console.log(answers);
-console.log(logoShape);
-console.log(logoShape.render());
+// console.log(answers);
+// console.log(logoShape);
+// console.log(logoShape.render());
 
 
 // create a template literal to format the SVG string
