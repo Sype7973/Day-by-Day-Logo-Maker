@@ -20,7 +20,7 @@ describe("drawLogo", () => {
     const expectedSvgString = `
       <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="100" r="100" fill="red"/>
-        <text x="100" y="100" text-anchor="middle" fill="white" font-size="40" font-family="Verdana">My Logo</text>
+        <text x="100" y="100" text-anchor="middle" fill="white" font-size="35" font-family="Verdana">My Logo</text>
       </svg>
     `.replace(/\s+/g, ' ').trim();
 
