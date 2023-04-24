@@ -1,6 +1,6 @@
 
     <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="100" cy="100" r="100" fill="red"/>
-      <text x="100" y="100" text-anchor="middle" fill="green" font-size="35" font-family="Verdana">ABC</text>
+      <polygon points="0, 200 200, 200 100, 0" fill="blue"/>
+      <text x="100" y="125" text-anchor="middle" fill="red" font-size="35" font-family="Verdana">ABC</text>
     </svg>
   

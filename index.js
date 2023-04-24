@@ -41,6 +41,6 @@ const init = async () => {
     const answers = await inquirer.prompt(logoQuestions);
     // pass answers to drawLogo function
     drawLogo(answers);
-    console.log(answers)
+    // console.log(answers)
 }
 init();
