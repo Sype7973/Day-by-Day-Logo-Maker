@@ -20,7 +20,7 @@ run "node index.js" to begin the application
 Once you have opened the app, and run "node index.js" you will be given 4 questions to answer to design your SVG logo. Once you have chosen those questions an SVG file will be made in the "examples" folder
 
 ## link to video preview:
-https://drive.google.com/file/d/1QmdqS0H7BD0aTT-GdtqZHM8hUSCPRlAL/view
+https://drive.google.com/file/d/1OK5Ec7CU4TKXfaYjUGnUdBH8q2RdKJnl/view
 
 
 

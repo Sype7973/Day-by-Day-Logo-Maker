@@ -1,6 +1,6 @@
 
     <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="0, 200 200, 200 100, 0" fill="blue"/>
+      <polygon points="0, 200 200, 200 100, 0" fill="green"/>
       <text x="100" y="125" text-anchor="middle" fill="red" font-size="35" font-family="Verdana">ABC</text>
     </svg>
   
