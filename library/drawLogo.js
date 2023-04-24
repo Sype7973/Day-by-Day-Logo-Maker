@@ -33,7 +33,7 @@ const drawLogo = (answers) => {
       <text x="${textPosition.x}" y="${textPosition.y}" text-anchor="middle" fill="${answers.textColor}" font-size="35" font-family="Verdana">${answers.logoText}</text>
     </svg>
   `;
-    console.log(logoTemplate);
+    console.log('Generated Logo.svg file')
 // write the SVG string to a file called logo.svg
 const filePath = path.join(__dirname, "../examples/logo.svg");
 fs.writeFileSync(filePath, logoTemplate);
